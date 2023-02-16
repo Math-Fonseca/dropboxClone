@@ -1,6 +1,6 @@
 class DropboxController {
   constructor() {
-    this.currentFolder = ["mf-solucoes"];
+    this.currentFolder = ["MF-SOLUCOES"];
 
     this.onselectionchange = new Event("selectionchange");
 
@@ -452,7 +452,6 @@ class DropboxController {
 
   renderNav() {
     let nav = document.createElement("nav");
-
     let path = [];
 
     for (let i = 0; i < this.currentFolder.length; i++) {
@@ -487,15 +486,11 @@ class DropboxController {
       a.addEventListener("click", (e) => {
         e.preventDefault();
 
-        this.currentFolder = [a.dataset.path.split("/")];
+        this.currentFolder = a.dataset.path.split("/");
 
         this.openFolder();
       });
     });
-
-    /* <span class="breadcrumb-segment__wrapper">
-                        
-                      </span> */
   }
 
   initEventsLi(li) {
