@@ -27,7 +27,6 @@ router.get("/file", (req, res) => {
       error: "File not found.",
     });
   }
-  console.log(path);
 });
 
 router.delete("/file", (req, res) => {
